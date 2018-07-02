@@ -1,5 +1,12 @@
 .header {
-  grid-area: header;
+    grid-area: header;
+    background-color: papayawhip;
+    font-family: Megrim;
+    text-align: center;
+}
+
+.profile-pic {
+  grid-area: profile-pic;
     background-color: yellow;
 }
 
@@ -30,8 +37,9 @@
 .profile-wrapper {
   display: grid;
   grid-gap: 2px;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
+    "profile-pic"
     "nav"
     "about"
     "image-on-display"
@@ -43,11 +51,12 @@
   .profile-wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 
-      "header     about"
-      "footer     about"
-      "nav        image-on-display"
-      "nav        image-on-display"
-      "contact-me contact-me";
+      "header      header"
+      "profile-pic about"
+      "footer      about"
+      "nav         image-on-display"
+      "nav         image-on-display"
+      "contact-me  contact-me";
   }
   nav ul {
     justify-content: space-between;
@@ -58,12 +67,21 @@
   .profile-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-      "header      about            about"
-      "nav         about            about"
-      "footer      image-on-display image-on-display"
-      "footer      contact-me       contact-me";
+      "header           header           header"
+      "profile-pic      about            about"
+      "nav              about            about"
+      "footer           image-on-display image-on-display"
+      "footer           contact-me       contact-me";
    }
    nav ul {
      flex-direction: column;
    }
+}
+
+
+#profile-pic{
+    margin: auto;
+    width: 50%;
+    border: 2px black;
+    border-radius: 50%;
 }
