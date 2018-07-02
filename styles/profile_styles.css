@@ -1,0 +1,69 @@
+.header {
+  grid-area: header;
+    background-color: yellow;
+}
+
+.about {
+  grid-area: about;
+    background-color: green;
+}
+
+.nav {
+  grid-area: nav;
+    background-color: aqua;
+}
+
+.image-on-display {
+  grid-area: image-on-display;
+    background-color: bisque;
+}
+
+.footer {
+  grid-area: footer;
+    background-color: crimson
+}
+
+.contact-me {
+    grid-area: contact-me;
+}
+
+.profile-wrapper {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "about"
+    "image-on-display"
+    "contact-me"
+    "footer";
+}
+
+@media (min-width: 500px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header     about"
+      "footer     about"
+      "nav        image-on-display"
+      "nav        image-on-display"
+      "contact-me contact-me";
+  }
+  nav ul {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 700px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "header      about            about"
+      "nav         about            about"
+      "footer      image-on-display image-on-display"
+      "footer      contact-me       contact-me";
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
