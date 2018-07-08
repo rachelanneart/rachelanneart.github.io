@@ -112,6 +112,8 @@
     width: 25px;
     height: 25px;
     border-radius: 2px;
+    border: 0;
+    padding: 0;
 }
 
 
