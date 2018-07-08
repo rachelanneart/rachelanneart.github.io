@@ -111,12 +111,15 @@
 .footer-item {
     width: 25px;
     height: 25px;
-    border-radius: 4px;
-    
+    border-radius: 2px;
 }
 
 
 /*font-awesome stuff*/
+
+.fa {
+  text-decoration: none;
+}
 
 .fa:hover {
     opacity: 0.7;
@@ -140,15 +143,4 @@
 .fa-instagram {
   background: #125688;
   color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
