@@ -1,0 +1,146 @@
+.header {
+    grid-area: header;
+    background-color: papayawhip;
+    font-family: Megrim;
+    text-align: center;
+}
+
+.profile-pic-container {
+  grid-area: profile-pic-container;
+    padding: 10px 0;
+    background-color: yellow;
+}
+
+.about {
+  grid-area: about;
+    background-color: green;
+}
+
+.nav {
+  grid-area: nav;
+    background-color: aqua;
+}
+
+.image-on-display {
+  grid-area: image-on-display;
+    background-color: bisque;
+}
+
+.footer {
+  grid-area: footer;
+    background-color: crimson;
+    padding: 10px 0;
+}
+
+.contact-me {
+    grid-area: contact-me;
+}
+
+.profile-wrapper {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-areas:
+    "header"
+    "profile-pic-container"
+    "nav"
+    "about"
+    "image-on-display"
+    "contact-me"
+    "footer";
+}
+
+.profile-wrapper > * {
+    border-radius: 4px;
+}
+
+
+@media (min-width: 500px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header                header"
+      "profile-pic-container about"
+      "footer                about"
+      "nav                   image-on-display"
+      "nav                   image-on-display"
+      "contact-me            contact-me";
+  }
+  nav ul {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 700px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "header                     header           header"
+      "profile-pic-container      about            about"
+      "nav                        about            about"
+      "footer                     image-on-display image-on-display"
+      "footer                     contact-me       contact-me";
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
+
+
+
+.profile-pic-frame {
+    overflow: hidden;
+    margin: auto;
+    width: 50%;
+    max-height: 400px;
+    border-radius: 50%;
+    background-color: burlywood;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-items {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer-item {
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+}
+
+
+/*font-awesome stuff*/
+
+.fa {
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
